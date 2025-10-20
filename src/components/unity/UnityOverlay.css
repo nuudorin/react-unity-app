@@ -1,0 +1,62 @@
+.unity-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 40;
+}
+
+.unity-overlay--error {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.unity-overlay--loading {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 30;
+}
+
+.unity-overlay__box {
+  text-align: center;
+  max-width: 640px;
+}
+
+.unity-overlay__title {
+  margin: 0 0 8px 0;
+}
+
+.unity-overlay__msg {
+  opacity: 0.9;
+  margin: 0;
+}
+
+.unity-overlay__actions {
+  margin-top: 12px;
+}
+
+.unity-overlay__btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.unity-overlay__spinner svg {
+  display: block;
+  margin: 0 auto;
+  width: 36px;
+  height: 36px;
+}
+
+@keyframes unity-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.unity-overlay__spinner svg {
+  animation: unity-spin 1s linear infinite;
+}
